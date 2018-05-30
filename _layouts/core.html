@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85127310-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-85127310-1');
+  </script>
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Guillaume Roy">
+  <meta name="description" content="{{ page.description }}">
+  <meta charset="UTF-8">
+
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:site_name" content="Guillaume Roy - Développeur Web à Sophia-Antipolis et Nice">
+  <meta property="og:image" content="{{ "/img/prof-pic-150.jpg" | prepend: site.url }}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ "/img/prof-pic-150.jpg" | prepend: site.url }}">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/img/favicon/apple-touch-icon.png" | prepend: site.url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicon/favicon-32x32.png" | prepend: site.url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicon/favicon-16x16.png" | prepend: site.url }}">
+  <link rel="manifest" href="{{ "/img/favicon/site.webmanifest" | prepend: site.url }}">
+  <link rel="mask-icon" href="{{ "/img/favicon/safari-pinned-tab.svg" | prepend: site.url }}" color="#5bbad5">
+  <link rel="shortcut icon" href="{{ "/img/favicon/favicon.ico" | prepend: site.url }}">
+  <meta name="apple-mobile-web-app-title" content="Guillaume Roy">
+  <meta name="application-name" content="Guillaume Roy">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-config" content="{{ "/img/favicon/browserconfig.xml" | prepend: site.url }}">
+  <meta name="theme-color" content="#ffffff">
+
+  {% feed_meta %}
+
+  <title>{{ page.title }}</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ "/theme/css/linearicons.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/owl.carousel.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/font-awesome.min.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/animate.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/bootstrap.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/main.css " | prepend: site.url }}">
+</head>
+
+<body {% if page.isIndex == 1 %}class="is-index"{% endif %}>
+  <div id="top"></div>
+  <!-- Start Header Area -->
+  <header class="default-header">
+    <div class="sticky-header">
+      <div class="container">
+        <div class="header-content d-flex justify-content-between align-items-center">
+          <div class="logo">
+            <a href="{{ site.url }}" class="smooth text-white">
+              Guillaume Roy
+            </a>
+          </div>
+          <div class="right-bar d-flex align-items-center">
+            <nav class="d-flex align-items-center">
+              <ul class="main-menu">
+                <li>
+                  <a href="{{ site.url }}/index.html#top">Accueil</a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}/index.html#services">Services</a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}/index.html#projects">Projets</a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}/index.html#blog">Blog</a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}/index.html#contact">Contact</a>
+                </li>
+              </ul>
+              <a href="#" class="mobile-btn">
+                <span class="lnr lnr-menu"></span>
+              </a>
+            </nav>
+            <div class="header-social d-flex align-items-center">
+              <a href=https://github.com/guillaume-roy target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+              <a href="https://twitter.com/toifiz" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/royguillaume1/" target="_blank">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header Area -->
+  <!-- Start Banner Area -->
+  <section class="banner-area relative" {% if page.cover != null %}style="background: url({{page.cover}}) no-repeat center center/cover;"{% endif %}>
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+      <div class="row fullscreen justify-content-center align-items-center">
+        <div class="col-lg-8">
+          <div class="banner-content text-center">
+            {% if page.isIndex == 1 %}<img src="/img/prof-pic-150.jpg" class="profile-pic" alt="Guillaume Roy - Photo de profil" title="Guillaume Roy - Photo de profil" />{% endif %}
+            {% if page.subtitle != null %}<p class="text-uppercase text-white">{{page.subtitle}}</p>{% endif %}
+            <h1 class="text-uppercase text-white">{{page.title}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Banner Area -->
+  {{ content }}
+  <footer class="section-full">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6">
+          <div class="single-footer-widget">
+            <h6 class="text-white text-uppercase mb-20">A propos</h6>
+            <img src="/img/prof-pic-150.jpg" class="profile-pic" alt="Guillaume Roy - Photo de profil" title="Guillaume Roy - Photo de profil" />
+            <p>Développeur Web et Full-Stack situé à Sophia-Antipolis, Nice et Monaco avec 8 ans d'expérience - Spécialités : Angular, Ionic 3, Firebase et Dotnet (.Net)</p>
+            <p>Je vous accompagne dans la conception et le développement de vos applications web et mobile.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="single-footer-widget">
+            <h6 class="text-white text-uppercase mb-20">Navigation</h6>
+            <div class="d-flex">
+              <ul class="footer-nav">
+                <li>
+                  <a href="{{ site.url }}/index.html#top">Accueil</a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}/index.html#services">Services</a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}/index.html#projects">Projets</a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}/index.html#blog">Blog</a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}/index.html#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex justify-content-between align-items-center">
+        <p class="footer-text m-0">Copyright &copy; 2018 | Tous droits réservés.
+          <a href="#">Guillaume Roy</a> Designed by
+          <a href="https://colorlib.com/wp">Colorlib</a>.</p>
+        <div class="footer-social d-flex align-items-center">
+          <a href=https://github.com/guillaume-roy target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="https://twitter.com/toifiz" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/royguillaume1/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ "/theme/js/vendor/jquery-2.2.4.min.js " | prepend: site.url }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="{{ "/theme/js/vendor/bootstrap.min.js " | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/jquery.ajaxchimp.min.js " | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/jquery.sticky.js " | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/owl.carousel.min.js " | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/mixitup.min.js " | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/main.js " | prepend: site.url }}"></script>
+</body>
+
+</html>
