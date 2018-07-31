@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85127310-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-85127310-1');
@@ -25,7 +25,7 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:site_name" content="Guillaume Roy - Développeur Web à Sophia-Antipolis et Nice">
-  <meta property="og:image" content="{{ "/img/prof-pic-150.jpg" | prepend: site.url }}">
+  <meta property="og:image" content="{{ page.cover | prepend: site.url }}">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@toifiz">
@@ -34,33 +34,31 @@
   <meta name="twitter:description" content="{{ page.description }}">
   <meta name="twitter:image" content="{{ page.cover | prepend: site.url }}">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/img/favicon/apple-touch-icon.png" | prepend: site.url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicon/favicon-32x32.png" | prepend: site.url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicon/favicon-16x16.png" | prepend: site.url }}">
-  <link rel="manifest" href="{{ "/img/favicon/site.webmanifest" | prepend: site.url }}">
-  <link rel="mask-icon" href="{{ "/img/favicon/safari-pinned-tab.svg" | prepend: site.url }}" color="#5bbad5">
-  <link rel="shortcut icon" href="{{ "/img/favicon/favicon.ico" | prepend: site.url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ " /img/favicon/apple-touch-icon.png " | prepend: site.url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ " /img/favicon/favicon-32x32.png " | prepend: site.url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ " /img/favicon/favicon-16x16.png " | prepend: site.url }}">
+  <link rel="manifest" href="{{ " /img/favicon/site.webmanifest " | prepend: site.url }}">
+  <link rel="mask-icon" href="{{ " /img/favicon/safari-pinned-tab.svg " | prepend: site.url }}" color="#5bbad5">
+  <link rel="shortcut icon" href="{{ " /img/favicon/favicon.ico " | prepend: site.url }}">
   <meta name="apple-mobile-web-app-title" content="Guillaume Roy">
   <meta name="application-name" content="Guillaume Roy">
   <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="msapplication-config" content="{{ "/img/favicon/browserconfig.xml" | prepend: site.url }}">
-  <meta name="theme-color" content="#ffffff">
-
-  {% feed_meta %}
+  <meta name="msapplication-config" content="{{ " /img/favicon/browserconfig.xml " | prepend: site.url }}">
+  <meta name="theme-color" content="#ffffff"> {% feed_meta %}
 
   <title>{{ page.title }}</title>
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ "/theme/css/linearicons.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ "/theme/css/owl.carousel.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ "/theme/css/font-awesome.min.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ "/theme/css/animate.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ "/theme/css/bootstrap.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ "/theme/css/main.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ " /theme/css/linearicons.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ " /theme/css/owl.carousel.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ " /theme/css/font-awesome.min.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ " /theme/css/animate.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ " /theme/css/bootstrap.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ " /theme/css/main.css " | prepend: site.url }}">
 </head>
 
-<body {% if page.isIndex == 1 %}class="is-index"{% endif %}>
+<body {% if page.isIndex==1 %}class="is-index" {% endif %}>
   <div id="top"></div>
   <!-- Start Header Area -->
   <header class="default-header">
@@ -113,16 +111,20 @@
   </header>
   <!-- End Header Area -->
   <!-- Start Banner Area -->
-  <section class="banner-area relative" {% if page.cover != null %}style="background: url({{page.cover}}) no-repeat center center/cover;"{% endif %}>
+  <section class="banner-area relative" {% if page.cover !=n ull %}style="background: url({{page.cover}}) no-repeat center center/cover;"
+    {% endif %}>
     <div class="overlay overlay-bg"></div>
     <div class="container">
       <div class="row fullscreen justify-content-center align-items-center">
         <div class="col-lg-8">
           <div class="banner-content text-center">
-            {% if page.isIndex == 1 %}<img src="/img/prof-pic-150.jpg" class="profile-pic" alt="Guillaume Roy - Photo de profil" title="Guillaume Roy - Photo de profil" />{% endif %}
-            {% if page.subtitle != null %}<p class="text-uppercase text-white">{{page.subtitle}}</p>{% endif %}
+            {% if page.isIndex == 1 %}
+            <img src="/img/prof-pic-150.jpg" class="profile-pic" alt="Guillaume Roy - Photo de profil"
+              title="Guillaume Roy - Photo de profil" />{% endif %} {% if page.subtitle != null %}
+            <p class="text-uppercase text-white">{{page.subtitle}}</p>{% endif %}
             <h1 class="text-uppercase text-white">{{page.title}}</h1>
-            {% if page.isIndex == 1 %}<p class="text-white">gr.guillaume.roy@gmail.com</p>{% endif %}
+            {% if page.isIndex == 1 %}
+            <p class="text-white">gr.guillaume.roy@gmail.com</p>{% endif %}
           </div>
         </div>
       </div>
@@ -136,8 +138,10 @@
         <div class="col-lg-4 col-sm-6">
           <div class="single-footer-widget">
             <h6 class="text-white text-uppercase mb-20">A propos</h6>
-            <img src="/img/prof-pic-150.jpg" class="profile-pic" alt="Guillaume Roy - Photo de profil" title="Guillaume Roy - Photo de profil" />
-            <p>Développeur Web et Full-Stack situé à Sophia-Antipolis, Nice et Monaco avec 8 ans d'expérience - Spécialités : Angular, Ionic 3, Firebase et Dotnet (.Net)</p>
+            <img src="/img/prof-pic-150.jpg" class="profile-pic" alt="Guillaume Roy - Photo de profil" title="Guillaume Roy - Photo de profil"
+            />
+            <p>Développeur Web et Full-Stack situé à Sophia-Antipolis, Nice et Monaco avec 8 ans d'expérience - Spécialités
+              : Angular, Ionic 3, Firebase et Dotnet (.Net)</p>
             <p>Je vous accompagne dans la conception et le développement de vos applications web et mobile.</p>
           </div>
         </div>
@@ -167,8 +171,7 @@
         </div>
       </div>
       <div class="footer-bottom d-flex justify-content-between align-items-center">
-        <p class="footer-text m-0">Copyright &copy; 2018 | Tous droits réservés.
-          Guillaume Roy Designed by
+        <p class="footer-text m-0">Copyright &copy; 2018 | Tous droits réservés. Guillaume Roy Designed by
           <a href="https://colorlib.com/wp" title="Colorlib">Colorlib</a>.</p>
         <div class="footer-social d-flex align-items-center">
           <a href=https://github.com/guillaume-roy target="_blank" rel="noopener" title="Footer Profil Github">
@@ -185,14 +188,14 @@
     </div>
   </footer>
 
-  <script src="{{ "/theme/js/vendor/jquery-2.2.4.min.js " | prepend: site.url }}"></script>
-  <script src="{{ "/theme/js/popper.min.js" | prepend: site.url }}"></script>
-  <script src="{{ "/theme/js/vendor/bootstrap.min.js " | prepend: site.url }}"></script>
-  <script src="{{ "/theme/js/jquery.ajaxchimp.min.js " | prepend: site.url }}"></script>
-  <script src="{{ "/theme/js/jquery.sticky.js " | prepend: site.url }}"></script>
-  <script src="{{ "/theme/js/owl.carousel.min.js " | prepend: site.url }}"></script>
-  <script src="{{ "/theme/js/mixitup.min.js " | prepend: site.url }}"></script>
-  <script src="{{ "/theme/js/main.js " | prepend: site.url }}"></script>
+  <script src="{{ " /theme/js/vendor/jquery-2.2.4.min.js " | prepend: site.url }}"></script>
+  <script src="{{ " /theme/js/popper.min.js " | prepend: site.url }}"></script>
+  <script src="{{ " /theme/js/vendor/bootstrap.min.js " | prepend: site.url }}"></script>
+  <script src="{{ " /theme/js/jquery.ajaxchimp.min.js " | prepend: site.url }}"></script>
+  <script src="{{ " /theme/js/jquery.sticky.js " | prepend: site.url }}"></script>
+  <script src="{{ " /theme/js/owl.carousel.min.js " | prepend: site.url }}"></script>
+  <script src="{{ " /theme/js/mixitup.min.js " | prepend: site.url }}"></script>
+  <script src="{{ " /theme/js/main.js " | prepend: site.url }}"></script>
 </body>
 
 </html>
