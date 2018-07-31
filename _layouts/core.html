@@ -34,28 +34,28 @@
   <meta name="twitter:description" content="{{ page.description }}">
   <meta name="twitter:image" content="{{ page.cover | prepend: site.url }}">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ " /img/favicon/apple-touch-icon.png " | prepend: site.url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ " /img/favicon/favicon-32x32.png " | prepend: site.url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ " /img/favicon/favicon-16x16.png " | prepend: site.url }}">
-  <link rel="manifest" href="{{ " /img/favicon/site.webmanifest " | prepend: site.url }}">
-  <link rel="mask-icon" href="{{ " /img/favicon/safari-pinned-tab.svg " | prepend: site.url }}" color="#5bbad5">
-  <link rel="shortcut icon" href="{{ " /img/favicon/favicon.ico " | prepend: site.url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/img/favicon/apple-touch-icon.png" | prepend: site.url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicon/favicon-32x32.png" | prepend: site.url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicon/favicon-16x16.png" | prepend: site.url }}">
+  <link rel="manifest" href="{{ "/img/favicon/site.webmanifest" | prepend: site.url }}">
+  <link rel="mask-icon" href="{{ "/img/favicon/safari-pinned-tab.svg" | prepend: site.url }}" color="#5bbad5">
+  <link rel="shortcut icon" href="{{ "/img/favicon/favicon.ico" | prepend: site.url }}">
   <meta name="apple-mobile-web-app-title" content="Guillaume Roy">
   <meta name="application-name" content="Guillaume Roy">
   <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="msapplication-config" content="{{ " /img/favicon/browserconfig.xml " | prepend: site.url }}">
+  <meta name="msapplication-config" content="{{ "/img/favicon/browserconfig.xml" | prepend: site.url }}">
   <meta name="theme-color" content="#ffffff"> {% feed_meta %}
 
   <title>{{ page.title }}</title>
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ " /theme/css/linearicons.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ " /theme/css/owl.carousel.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ " /theme/css/font-awesome.min.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ " /theme/css/animate.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ " /theme/css/bootstrap.css " | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ " /theme/css/main.css " | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/linearicons.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/owl.carousel.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/font-awesome.min.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/animate.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/bootstrap.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/theme/css/main.css" | prepend: site.url }}">
 </head>
 
 <body {% if page.isIndex==1 %}class="is-index" {% endif %}>
@@ -120,7 +120,7 @@
           <div class="banner-content text-center">
             {% if page.isIndex == 1 %}
             <img src="/img/prof-pic-150.jpg" class="profile-pic" alt="Guillaume Roy - Photo de profil"
-              title="Guillaume Roy - Photo de profil" />{% endif %} {% if page.subtitle != null %}
+              title="Guillaume Roy - Photo de profil"/>{% endif %} {% if page.subtitle != null %}
             <p class="text-uppercase text-white">{{page.subtitle}}</p>{% endif %}
             <h1 class="text-uppercase text-white">{{page.title}}</h1>
             {% if page.isIndex == 1 %}
@@ -188,14 +188,14 @@
     </div>
   </footer>
 
-  <script src="{{ " /theme/js/vendor/jquery-2.2.4.min.js " | prepend: site.url }}"></script>
-  <script src="{{ " /theme/js/popper.min.js " | prepend: site.url }}"></script>
-  <script src="{{ " /theme/js/vendor/bootstrap.min.js " | prepend: site.url }}"></script>
-  <script src="{{ " /theme/js/jquery.ajaxchimp.min.js " | prepend: site.url }}"></script>
-  <script src="{{ " /theme/js/jquery.sticky.js " | prepend: site.url }}"></script>
-  <script src="{{ " /theme/js/owl.carousel.min.js " | prepend: site.url }}"></script>
-  <script src="{{ " /theme/js/mixitup.min.js " | prepend: site.url }}"></script>
-  <script src="{{ " /theme/js/main.js " | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/vendor/jquery-2.2.4.min.js" | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/popper.min.js" | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/vendor/bootstrap.min.js" | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/jquery.ajaxchimp.min.js" | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/jquery.sticky.js" | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/owl.carousel.min.js" | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/mixitup.min.js" | prepend: site.url }}"></script>
+  <script src="{{ "/theme/js/main.js" | prepend: site.url }}"></script>
 </body>
 
 </html>
